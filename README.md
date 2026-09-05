@@ -1,4 +1,4 @@
-**Nodus — RP2040 Custom USB Keystroke Injection Platform**
+****Nodus — RP2040 Custom USB Keystroke Injection Platform****
 
 Nodus is a custom, ultra-compact USB Human Interface Device (HID) platform designed for keystroke injection, automated penetration testing, and security research. Powered by the Raspberry Pi RP2040 microcontroller, the board features dedicated high-speed QSPI flash memory, a precision external crystal oscillator for reliable USB PHY timing, and hardware physical controls for rapid reset and bootloader recovery.
 
@@ -7,7 +7,7 @@ Nodus is a custom, ultra-compact USB Human Interface Device (HID) platform desig
 The PCB is custom designed in a standard USB stick form factor with an integrated PCB USB-A plug:
 
 
-Key Hardware Features
+**Key Hardware Features**
 
 Microcontroller: Raspberry Pi RP2040 Dual-Core ARM Cortex-M0+ running up to 133 MHz.
 
