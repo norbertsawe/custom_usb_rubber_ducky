@@ -1,20 +1,10 @@
-Nodus — RP2040 Custom USB Keystroke Injection Platform
+**Nodus — RP2040 Custom USB Keystroke Injection Platform**
 
 Nodus is a custom, ultra-compact USB Human Interface Device (HID) platform designed for keystroke injection, automated penetration testing, and security research. Powered by the Raspberry Pi RP2040 microcontroller, the board features dedicated high-speed QSPI flash memory, a precision external crystal oscillator for reliable USB PHY timing, and hardware physical controls for rapid reset and bootloader recovery.
 
-📷 Board Hardware Overview
+**📷 Board Hardware Overview**
 
 The PCB is custom designed in a standard USB stick form factor with an integrated PCB USB-A plug:
-
-               +----------------------------------+
-               |  [B] Boot Switch   [R] Reset Sw  |
-   +-----------+  +-----+                         +-----------+
-   |           |  |     | RP2040                  |           |
-   |   USB-A   |  |     | Dual Core ARM           |  Status   |
-   | Connector |  +-----+                         |  LEDs     |
-   |           |  +-------------+                 |           |
-   +-----------+  | QSPI Flash  |  12MHz Crystal  +-----------+
-               +----------------------------------+
 
 
 Key Hardware Features
@@ -32,8 +22,8 @@ B (BOOTSEL): Physical tactile button to force UF2 bootloader mode upon startup.
 R (RESET): Hardware reset button for fast rebooting and rapid payload re-execution cycles without unplugging the drive.
 
 Form Factor: Slim, low-profile SMT design tailored for standard custom USB flash drive enclosures.
-
-📊 Technical Specifications
+**
+📊 Technical Specifications**
 
 Component
 
@@ -68,15 +58,14 @@ Debug & Control
 Tactical Boot/Reset switches, SWD target pads
 
 📁 Repository Structure
-
-.
-├── Docs/       # Technical datasheets, schematics exports, and PCB documentation
-├── Firmware/   # C/C++ SDK project files, build configurations, and payload engines
-├── Hardware/   # KiCad schematics (.kicad_sch), PCB layouts (.kicad_pcb), and Gerber outputs
-└── README.md   # Project overview and instructions
+ Docs/       # Technical datasheets, schematics exports, and PCB documentation
+ Firmware/   # C/C++ SDK project files, build configurations, and payload engines 
+ Hardware/   # KiCad schematics (.kicad_sch), PCB layouts (.kicad_pcb), and Gerber outputs
+ README.md   # Project overview and instructions
 
 
-🚀 Quickstart & Firmware Deployment
+
+**🚀 Quickstart & Firmware Deployment**
 
 1. Putting the Board into Bootloader Mode
 
@@ -95,8 +84,8 @@ Compile your firmware using the Raspberry Pi Pico C/C++ SDK or CircuitPython / M
 Drag and drop your compiled .uf2 file onto the mounted RPI-RP2 drive.
 
 The device will automatically reboot and start executing the payload instantly.
-
-🛠 Building Firmware
+**
+🛠 Building Firmware**
 
 If using the official C/C++ SDK:
 
