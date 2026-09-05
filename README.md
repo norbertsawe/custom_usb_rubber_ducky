@@ -6,10 +6,14 @@
 
 ## 📷 Board Hardware Overview
 
+<<<<<<< HEAD
 The PCB is custom designed in a standard USB stick form factor with an integrated PCB USB-A plug:
 
 ```
 <img width="526" height="403" alt="2026-09-05-162007_hyprshot" src="https://github.com/user-attachments/assets/fe85cdbf-8ad3-4a32-a78e-865f68fb89f0" />
+=======
+The PCB is custom designed in a standard USB stick form factor with an integrated PCB USB-A plug.
+>>>>>>> 5fe3d07 (adding PCB images)
 
 
 ```
