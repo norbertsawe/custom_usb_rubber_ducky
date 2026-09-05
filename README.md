@@ -1,4 +1,10 @@
+
 # Nodus — RP2040 Custom USB Keystroke Injection Platform
+
+![Hardware Spec](https://img.shields.io/badge/MCU-RP2040-blue)
+![Interface](https://img.shields.io/badge/Interface-USB%202.0-green)
+![License](https://img.shields.io/badge/License-MIT-brightgreen)
+![Firmware Status](https://img.shields.io/badge/Firmware-WIP-orange)
 
 **Nodus** is a custom, ultra-compact USB Human Interface Device (HID) platform designed for keystroke injection, automated penetration testing, and security research. Powered by the Raspberry Pi RP2040 microcontroller, the board features dedicated high-speed QSPI flash memory, a precision external crystal oscillator for reliable USB PHY timing, and hardware physical controls for rapid reset and bootloader recovery.
 
@@ -6,13 +12,17 @@
 
 ## 📷 Board Hardware Overview
 
-<<<<<<< HEAD
 The PCB is custom designed in a standard USB stick form factor with an integrated PCB USB-A plug:
 
-```
-[Nodus PCB Render](rubber_ducky_img2.png)
+<p align="center">
+  <img src="rubber_ducky_img1.png" alt="Board View 1" width="45%" />
+  <img src="rubber_ducky_img2.png" alt="Board View 2" width="45%" />
+</p>
 
-```
+<p align="center">
+  <img src="rubber_ducky_img3.png" alt="Board View 3" width="45%" />
+  <img src="rubber_ducky_img4.png" alt="Board View 4" width="45%" />
+</p>
 
 ### Key Hardware Features
 
@@ -20,10 +30,8 @@ The PCB is custom designed in a standard USB stick form factor with an integrate
 * **Storage:** High-speed QSPI NOR Flash IC for payload scripts and custom firmware storage.
 * **Clock Source:** External 12 MHz Crystal Oscillator ensuring strict USB 2.0 full-speed timing stability.
 * **On-Board Controls:**
-* **`B` (BOOTSEL):** Physical tactile button to force UF2 bootloader mode upon startup.
-* **`R` (RESET):** Hardware reset button for fast rebooting and rapid payload re-execution cycles without unplugging the drive.
-
-
+  * **`B` (BOOTSEL):** Physical tactile button to force UF2 bootloader mode upon startup.
+  * **`R` (RESET):** Hardware reset button for fast rebooting and rapid payload re-execution cycles without unplugging the drive.
 * **Form Factor:** Slim, low-profile SMT design tailored for standard custom USB flash drive enclosures.
 
 ---
@@ -31,7 +39,7 @@ The PCB is custom designed in a standard USB stick form factor with an integrate
 ## 📊 Technical Specifications
 
 | Component | Specification / Notes |
-| --- | --- |
+| :--- | :--- |
 | **Core Processor** | RP2040 (Dual ARM Cortex-M0+, 264KB SRAM) |
 | **Clock Source** | 12.000 MHz SMD Crystal Oscillator ($\pm$20 ppm) |
 | **Flash Memory** | External QSPI NOR Flash (W25Qxx series or equivalent) |
@@ -44,37 +52,37 @@ The PCB is custom designed in a standard USB stick form factor with an integrate
 
 ## 📁 Repository Structure
 
+
 ```
+
 .
-├── Docs/        # Technical datasheets, schematics exports, and PCB documentation
-├── Firmware/    # C/C++ SDK project files, build configurations, and payload engines
-├── Hardware/    # KiCad schematics (.kicad_sch), PCB layouts (.kicad_pcb), and Gerber outputs
-└── README.md    # Project overview and instructions
+├── Hardware/            # KiCad schematics (.kicad_sch), PCB layouts (.kicad_pcb), and Gerber outputs
+├── README.md            # Project overview and instructions
+├── rubber_ducky_img1.png
+├── rubber_ducky_img2.png
+├── rubber_ducky_img3.png
+└── rubber_ducky_img4.png
 
 ```
 
 ---
 
-## 🚀 Quickstart & Firmware Deployment
+## 🚀 Quickstart & Hardware Testing
 
 ### 1. Putting the Board into Bootloader Mode
-
 1. Plug the Nodus device into a host computer USB port.
 2. Hold down the **`B` (BOOTSEL)** button and press the **`R` (RESET)** button once (or plug the device in while holding **`B`**).
 3. Release the **`B`** button.
 4. The device will enumerate as an external mass storage drive named `RPI-RP2`.
 
-### 2. Flashing Binary Files
-
-1. Compile your firmware using the Raspberry Pi Pico C/C++ SDK or CircuitPython / MicroPython.
-2. Drag and drop your compiled `.uf2` file onto the mounted `RPI-RP2` drive.
-3. The device will automatically reboot and start executing the payload instantly.
-
 ---
 
-## 🛠 Building Firmware
+## 🛠 Firmware Development (WIP)
 
-If using the official C/C++ SDK:
+> [!NOTE]
+> **Work In Progress:** Custom payload engines and dedicated firmware drivers are currently under active development. Hardware architecture and memory configurations are finalized.
+
+Target build process once the C/C++ SDK engine is integrated:
 
 ```bash
 cd Firmware
@@ -83,8 +91,6 @@ cmake ..
 make -j$(nproc)
 
 ```
-
-This generates the output `.uf2` binary ready for flashing.
 
 ---
 
@@ -97,3 +103,7 @@ This generates the output `.uf2` binary ready for flashing.
 ## 📜 License
 
 This project is licensed under the MIT License. See the `LICENSE` file for details.
+
+```
+
+```
